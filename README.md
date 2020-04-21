@@ -18,8 +18,18 @@ grpcflow(argv.server, argv.plaintext, request).then((value) => {
  node testcli.js --server="localhost:50061" --intent="get-agent-name" --plaintext
  ```
 
- # full example for Dialogflow inline editor 
- ## index.js
+# full example for Dialogflow inline editor 
+
+## server code
+ please visit https://github.com/tomyjwu/python-grpcflow for example python server to receive the grpc Dialogflow request. Following sample assumed the server is deployed to google cloud run.
+
+ you should replace `grpcflowServer` with your server/api address.
+ 
+ ```
+ const grpcflowServer = "grpcflow-server-xyspwhk3xq-uc.a.run.app";
+ ```
+
+## index.js
  ```
  // See https://github.com/dialogflow/dialogflow-fulfillment-nodejs
 // for Dialogflow fulfillment library docs, samples, and to report issues
@@ -52,7 +62,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   agent.handleRequest(grpcflowHandler);
 });
 ```
-### package.json
+## package.json
 ```
 {
   "name": "dialogflowFirebaseFulfillment",
