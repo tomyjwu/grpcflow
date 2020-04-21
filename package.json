@@ -1,0 +1,27 @@
+{
+  "name": "@tomyjwu/grpcflow-client",
+  "version": "0.1.0",
+  "description": "client lib to call grpcflow",
+  "main": "grpcflow-client.js",
+  "scripts": {
+    "testcli": "node testcli.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomyjwu/grpcflow-client.git"
+  },
+  "keywords": [
+    "gRPC",
+    "Dialogflow"
+  ],
+  "author": "tomyjwu",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.4",
+    "grpc": "^1.24.2"
+  },
+  "devDependencies": {
+    "yargs": "^15.3.1"
+  }
+}
