@@ -14,6 +14,13 @@ grpcflow(argv.server, argv.plaintext, request).then((value) => {
     });
 ```
 # testing cli example
+
+please do
+```
+npm install
+```
+
+then you could do
 ```
  node testcli.js --server="localhost:50061" --intent="get-agent-name" --plaintext
  ```
